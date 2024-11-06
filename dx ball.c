@@ -14,10 +14,10 @@ int score = 0;
 int lives = MAX_LIVES;
 char bricks[HEIGHT / 2][WIDTH];
 
-// Function to initialize bricks in structured rows
-void init_bricks() {
-    for (int i = 0; i < HEIGHT / 2; i++)
-    {
-
-    }
-}
+for (int i = 0; i < HEIGHT / 2; i++) {
+        for (int j = 0; j < WIDTH; j++) {
+            // Create rows of bricks with gaps
+            if (i % 2 == 0 && j % 4 != 0) {
+                bricks[i][j] = '#';
+            } else {
+                bricks[i][j] = ' ';
