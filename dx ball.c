@@ -20,4 +20,4 @@ for (int i = 0; i < HEIGHT / 2; i++) {
             if (i % 2 == 0 && j % 4 != 0) {
                 bricks[i][j] = '#';
             } else {
-                bricks[i][j] = ' ';
+                bricks[i][j] = ' ';   //buhkbkvgsbd 
