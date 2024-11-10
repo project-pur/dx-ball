@@ -36,5 +36,5 @@ void draw() {
             printf("%c", bricks[i][j]);
         }
         printf("\n");
-    }
+    } 
 
