@@ -20,4 +20,21 @@ for (int i = 0; i < HEIGHT / 2; i++) {
             if (i % 2 == 0 && j % 4 != 0) {
                 bricks[i][j] = '#';
             } else {
-                bricks[i][j] = ' ';   //buhkbkvgsbd 
+                bricks[i][j] = ' ';
+            }
+        }
+    }
+}
+
+// Function to draw the game board
+void draw() {
+    system("cls");
+
+    // Draw bricks
+    for (int i = 0; i < HEIGHT / 2; i++) {
+        for (int j = 0; j < WIDTH; j++) {
+            printf("%c", bricks[i][j]);
+        }
+        printf("\n");
+    }
+
