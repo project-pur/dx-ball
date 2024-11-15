@@ -38,3 +38,21 @@ void draw() {
         printf("\n");
     } 
 
+// Draw empty space above paddle and ball
+    for (int i = HEIGHT / 2; i < HEIGHT; i++) {
+        for (int j = 0; j < WIDTH; j++) {
+            if (i == ball_y && j == ball_x) {
+                printf("O"); // Ball
+            } else if (i == HEIGHT - 1 && j >= paddle_x && j < paddle_x + PADDLE_WIDTH) {
+                printf("="); // Paddle
+            } else {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    // Display score and lives
+    printf("Score: %d    Lives: %d\n", score, lives);
+}
+
