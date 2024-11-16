@@ -56,3 +56,23 @@ void draw() {
     printf("Score: %d    Lives: %d\n", score, lives);
 }
 
+// Function to update the game state
+void update() {
+    // Update ball position
+    ball_x += ball_dx;
+    ball_y += ball_dy;
+
+    // Check for collision with walls
+    if (ball_x <= 0 || ball_x >= WIDTH - 1)
+        ball_dx *= -1;
+
+    if (ball_y <= 0)
+        ball_dy *= -1;
+
+    // Check for collision with paddle
+    if (ball_y == HEIGHT - 2 && ball_x >= paddle_x && ball_x < paddle_x + PADDLE_WIDTH) {
+        ball_dy *= -1;
+    }
+
+
+
