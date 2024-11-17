@@ -73,6 +73,12 @@ void update() {
     if (ball_y == HEIGHT - 2 && ball_x >= paddle_x && ball_x < paddle_x + PADDLE_WIDTH) {
         ball_dy *= -1;
     }
+    // Check for collision with bricks
+    if (ball_y < HEIGHT / 2 && bricks[ball_y][ball_x] == '#') {
+        bricks[ball_y][ball_x] = ' ';
+        score += 10;
+        ball_dy *= -1;
+    }
 
 
 
