@@ -79,6 +79,24 @@ void update() {
         score += 10;
         ball_dy *= -1;
     }
+    // Check if ball falls below paddle (lose a life)
+    if (ball_y >= HEIGHT - 1) {
+        lives--;
+        if (lives > 0) {
+            // Reset ball and paddle positions
+            ball_x = WIDTH / 2;
+            ball_y = HEIGHT / 2;
+            paddle_x = WIDTH / 2 - PADDLE_WIDTH / 2;
+            ball_dx = 1;
+            ball_dy = 1;
+        } else {
+            printf("Game Over! Your final score is: %d\n", score);
+            printf("Press any key to exit...\n");
+            _getch(); // Wait for user input before exiting
+            exit(0);
+        }
+    }
+}
 
 
 
