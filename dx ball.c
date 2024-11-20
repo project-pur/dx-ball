@@ -97,6 +97,16 @@ void update() {
         }
     }
 }
+// Function to control the paddle
+void input() {
+    if (_kbhit()) {
+        char ch = _getch();
+        if (ch == 'a' && paddle_x > 0)
+            paddle_x--;
+        else if (ch == 'd' && paddle_x + PADDLE_WIDTH < WIDTH)
+            paddle_x++;
+    }
+}
 
 
 
