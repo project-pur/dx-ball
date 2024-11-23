@@ -108,5 +108,21 @@ void input() {
     }
 }
 
+int main() {
+    init_bricks();
+    ball_x = WIDTH / 2;
+    ball_y = HEIGHT / 2;
+
+    while (1) {
+        draw();
+        input();
+        update();
+        Sleep(50); // Adjust speed
+    }
+
+    return 0;
+}
+
+
 
 
