@@ -14,7 +14,9 @@ int score = 0;
 int lives = MAX_LIVES;
 char bricks[HEIGHT / 2][WIDTH];
 
-for (int i = 0; i < HEIGHT / 2; i++) {
+// Function to initialize bricks in structured rows
+void init_bricks() {
+    for (int i = 0; i < HEIGHT / 2; i++) {
         for (int j = 0; j < WIDTH; j++) {
             // Create rows of bricks with gaps
             if (i % 2 == 0 && j % 4 != 0) {
@@ -36,7 +38,7 @@ void draw() {
             printf("%c", bricks[i][j]);
         }
         printf("\n");
-    } 
+    }
 
 // Draw empty space above paddle and ball
     for (int i = HEIGHT / 2; i < HEIGHT; i++) {
