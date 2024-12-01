@@ -37,7 +37,7 @@ void draw() {
         for (int j = 0; j < WIDTH; j++) {
             printf("%c", bricks[i][j]);
         }
-        printf("\n");
+       printf("\n");
     }
 
 // Draw empty space above paddle and ball
